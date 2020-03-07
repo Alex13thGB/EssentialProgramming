@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+    function askQuestion(question){
+        var userAnswer = prompt(question[1]);
+        if((userAnswer != null) && (question[0] == userAnswer.toUpperCase())) {
+            alert("Вы ответили правильно!");
+            return 1;
+        } else {
+            alert("Вы ответили не правильно.\n"
+                + "Правильный ответ: " + question[0]);
+            return 0;
+        }
+    }
+    
+    var questions = [];
+    questions.push(["КАПУСТА", "Сто одежек и все без застежек?"]);
+    questions.push(["ЧЕРЕПАХА", "Всех смешит,\nПотому что не спешит!"]);
+    questions.push(["ТИГР", "Решётка на нем нарисована чётко.\n"
+                + "И очень к лицу людоеду решётка"]);
+
+    var correct = 0;
+    for(var i = 0; i < questions.length; i++){
+        correct = askQuestion(questions[i]) + correct;
+    }
+
+    alert("Вы ответили правильно на " + correct 
+        + " из " + questions.length + " вопросов ");
+
+
+</script>

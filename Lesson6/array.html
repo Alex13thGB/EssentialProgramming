@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+    var numbers = [];
+    var questionsCount = 3;
+    var numbersCount = 5;
+    for(i = 1; i <= numbersCount; i++) {
+        var number = parseInt(Math.random() * 100);
+        numbers.push(number);
+    }
+
+    alert("Запомните числа и их порядок: " + numbers);
+
+    for(var i = 1; i <= questionsCount; i++) {
+        var n = parseInt(Math.random() * (numbers.length - 1));
+        var userAnswer = +prompt("Каким было число " + (n + 1) +"?");
+        if(userAnswer == numbers[n]){
+            alert("Ответ правильный!")
+        } else {
+            alert("Неверно, правильный ответ: " + numbers[n]);
+        }
+    }
+
+</script>

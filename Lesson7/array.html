@@ -1,0 +1,58 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+    function getAscNumbers(n) {
+        var numberArray = [];
+        for(var i = 1; i <= n; i++){
+            numberArray.push(i);
+        }
+        return numberArray;
+    }
+
+    function sum(numberArray){
+        var result = 0;
+        for(var i = 0; i < numberArray.length; i++){
+            result = result + numberArray[i];
+        }
+        return result;
+    }
+
+    function max(numberArray){
+        var result = numberArray[0];
+        for(var i = 1; i < numberArray.length; i++){
+            if(result < numberArray[i])
+                result = numberArray[i];
+        }
+        return result;
+    }
+
+    function min(numberArray){
+        var result = numberArray[0];
+        for(var i = 1; i < numberArray.length; i++){
+            if(result > numberArray[i])
+                result = numberArray[i];
+        }
+        return result;
+    }
+
+    function getEvenNumbers(numberArray){
+        var result = [];
+        for(var i = 0; i < numberArray.length; i++){
+            if(numberArray[i] % 2 == 0)
+                result.push(numberArray[i]);
+        }
+        return result;
+    }
+
+    var numbers = getAscNumbers(10);
+    alert("Массив чисел: " + numbers);
+    alert("Сумма чисел массива: " + sum(numbers));
+    alert("Максимальное значение в массиве: " + max(numbers)); 
+    alert("Минимальное значение в массиве: " + min(numbers)); 
+    var getEvenNumbers = getEvenNumbers(numbers);
+    alert("Минимальное значение в массиве: " + evenArray); 
+
+
+
+</script>

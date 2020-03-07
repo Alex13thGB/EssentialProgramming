@@ -1,0 +1,46 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+    var correctUserAnswerCount = 0;
+    var questionsCount = 0;
+
+    var answer = "КАПУСТА";
+    var userAnswer = prompt("Сто одежек и все без застежек?");
+    questionsCount++;
+    if(answer == userAnswer.toUpperCase()) {
+        alert("Вы ответили правильно!");
+        correctUserAnswerCount++;
+    } else {
+        alert("Вы ответили не правильно.\n"
++ "Правильный ответ: " + answer);
+    }
+
+    var answer = "ЧЕРЕПАХА";
+    var userAnswer = prompt("Всех смешит,\nПотому что не спешит!");
+    questionsCount++;
+    if(answer == userAnswer.toUpperCase()) {
+        alert("Вы ответили правильно!");
+        correctUserAnswerCount++;
+    } else {
+        alert("Вы ответили не правильно.\n"
++ "Правильный ответ: " + answer);
+    }
+
+    var answer = "ТИГР";
+    var userAnswer = prompt("Решётка на нем нарисована чётко.\n"
++ "И очень к лицу людоеду решётка");
+    questionsCount++;
+    if(answer == userAnswer.toUpperCase()) {
+        alert("Вы ответили правильно!");
+        correctUserAnswerCount++;
+    } else {
+        alert("Вы ответили не правильно.\n"
++ "Правильный ответ: " + answer);
+    }
+
+    alert("Вы ответили правильно на " + correctUserAnswerCount 
++ " из " + questionsCount + " вопросов ");
+
+
+</script>

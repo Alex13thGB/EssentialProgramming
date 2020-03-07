@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+    var answer = parseInt(Math.random() * 100);
+    var maxTryCount = 7;
+    var userCount = 2;
+    var userAnswer;
+    var isCorrectAnswer = false;
+    var stopLoop = false;
+
+    while(!stopLoop) {
+        for(var user = 1; user <= userCount; user++)
+        {
+            userAnswer = prompt("Пользователь " + user + " угадайте число от 0 до 100");
+            if(userAnswer == null) {
+                stopLoop = true;
+                break;
+            }
+            userAnswer = parseInt(userAnswer);
+            if(userAnswer == answer) {
+                alert("Вы угадли!");
+                stopLoop = true;
+                isCorrectAnswer = true;
+                break;
+            } else if (userAnswer > answer) {
+                alert("Ваше число больше.")
+            } else {
+                alert("Ваше число меньше!")
+            }
+        }
+    }
+
+    if(isCorrectAnswer){
+        alert("Выиграл пользователь: " + user);
+    } else {
+        alert("Пользователь " + user + " прервал игру. \nПравильный ответ: " + answer);
+    }
+
+</script>

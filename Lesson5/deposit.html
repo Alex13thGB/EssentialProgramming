@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+    var yearCount = 35;
+    do {
+        var depositSum = +prompt("Введите сумму депозита (положительное число)");
+    } while(isNaN(depositSum) || depositSum <= 0)
+    do {
+        var procent = + prompt("Введите начисляемый процент (число)")
+    } while(isNaN(procent))
+
+    document.write("Размер вклада: " + depositSum.toFixed(2) + "<br>");
+    var iStr = "";
+    for(var i = 1; i <= yearCount; i++) {
+        depositSum = depositSum + depositSum * procent/100;
+        iStr = i.toString(); 
+
+        if(i != 11 && iStr[iStr.length-1] == "1") {
+            document.write("Размер вклада через " + i + " год: " + depositSum.toFixed(2) + "<br>");
+        } else if (i > 5) {
+            document.write("Размер вклада через " + i + " лет: " + depositSum.toFixed(2) + "<br>");
+        } else {
+            document.write("Размер вклада через " + i + " года: " + depositSum.toFixed(2) + "<br>");
+        }
+    }
+
+</script>

@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+    function generateText(letters, length){
+        var result = "";
+        for(var i = 0; i < length; i++){
+            n = Math.round(Math.random() * (letters.length - 1));
+            result = result + letters[n];
+        }
+        return result;
+    }
+
+    function trainTypping(letters, message){
+        alert(message)
+        var text = generateText(letters, 10);
+        while(true){
+            userText = prompt("Введите следующий текст: " + text);
+            if(text == userText){
+                alert("Все верно!");
+                break;
+            } else {
+                alert("Вы ошиблись, попробуйте еще раз.");
+            }
+        }
+    } 
+
+    var levelLetters = [];
+    var levelMessages = [];
+    levelLetters.push(["а", "ф"]);
+    levelMessages.push("Поставьте мизинец левой руки на букву Ф, указательный — на А."
+        + " Запомни расположение пальцев. Повторяйте за мной");
+    levelLetters.push(["ы", "в"]);
+    levelMessages.push("Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, "
+        + " — на В, указательный — на А. Мизинец правой руки на букву Ж, "
+        + " палец — на Д, средний — на Л, указательный — на О. "
+        + " Запомни расположение пальцев. Повторяйте за мной");
+    levelLetters.push(["ж","о"]);
+    levelMessages.push(levelMessages[1]);
+
+    for(i = 0; i < levelLetters.length; i++){
+        trainTypping(levelLetters[i], levelMessages[i]);
+    }
+
+</script>
